@@ -1,0 +1,22 @@
+{
+    "clientName": "Thunder Client",
+    "environmentName": "PizzariaMPL",
+    "environmentId": "65883713-b6e8-4d76-8b0f-049fcf11324e",
+    "dateExported": "2024-05-27T03:49:20.304Z",
+    "version": "1.2",
+    "variables": [
+        {
+            "name": "BaseURL",
+            "value": "http://localhost:"
+        },
+        {
+            "name": "Port",
+            "value": "3000"
+        },
+        {
+            "name": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTNkZDZiOWYzYjU4Yzg1ZWJiNzA3NCIsImlhdCI6MTcxNjc3OTgwNywiZXhwIjoxNzE2ODY2MjA3fQ.tIdHHxlRB1cHt2NXvtKQBwuGa19BTx14ELnDk9Ux1O4"
+        }
+    ],
+    "ref": "F7tl8Oq6UdDIcwgdys4sP0iR0iVODttetrxb9kkmsVqU1p2DdOU4Z5bP6cQfv80y"
+}

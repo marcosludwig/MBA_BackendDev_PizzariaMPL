@@ -1,0 +1,469 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PizzariaMPL",
+    "collectionId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+    "dateExported": "2024-05-27T03:48:21.930Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-05-26T02:18:13.588Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "060dacc7-aa25-459a-908a-f116bbb7d91f",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2024-05-26T02:18:13.589Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "Pizza",
+            "containerId": "",
+            "created": "2024-05-26T02:18:13.590Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "Cart",
+            "containerId": "",
+            "created": "2024-05-26T02:18:13.592Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "Order",
+            "containerId": "",
+            "created": "2024-05-26T02:18:13.593Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d16d8f82-725e-433c-9cd3-ad0c921363c2",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "FindAll",
+            "url": "{{BaseURL}}{{Port}}/user/findAll",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-26T02:18:13.588Z",
+            "modified": "2024-05-26T02:18:13.588Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "654d5d24-36fc-4b1a-a065-7d6093ef5986",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "FindByID",
+            "url": "{{BaseURL}}{{Port}}/user/findById/6652a021cb8e763e218613fb",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-26T02:18:13.589Z",
+            "modified": "2024-05-27T02:58:45.125Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "eb8572e2-63e4-4431-be8b-33a6e6677ce4",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "Create",
+            "url": "{{BaseURL}}{{Port}}/user/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-05-26T02:18:13.590Z",
+            "modified": "2024-05-27T03:14:24.383Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Marcos\",\n  \"email\": \"marcosludwig@gmail.com\",\n  \"password\": \"Abcd1234\",\n  \"image\": \"marcosludwig.jpg\",\n  \"admin\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4b47bff6-b154-41f6-be91-cac9962e33f5",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "Update",
+            "url": "{{BaseURL}}{{Port}}/usuario/update/63460282c459305bb574fd65",
+            "method": "PUT",
+            "sortNum": 35000,
+            "created": "2024-05-26T02:18:13.591Z",
+            "modified": "2024-05-26T02:18:13.591Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Leo\",\n  \"email\": \"leo@email.com\",\n  \"senha\": \"senhasecreta123\",\n  \"imagem\": \"img.leosite.com.br/leo.jpg\",\n  \"admin\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f39963fc-4e63-4ded-9b27-9370dd433a42",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "Delete",
+            "url": "{{BaseURL}}{{Port}}/usuario/remove/634cb7e1e1380e93ccfa9c5c",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-05-26T02:18:13.592Z",
+            "modified": "2024-05-26T02:18:13.592Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "615eee4f-0fa2-424d-886c-ce3ce1595c0f",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "Add Address",
+            "url": "{{BaseURL}}{{Port}}/user/addAddress/6652a021cb8e763e218613fb",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-05-26T02:18:13.593Z",
+            "modified": "2024-05-26T03:50:56.666Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "\n  [\n    {\n      \"street\": \"rua teste 5\",\n      \"number\": 499,\n      \"CEP\": \"12312-123\"\n    }\n  ]\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "f1d5a1b6-da20-466d-9ea6-a31cd794a113",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0b99048-4ffd-4d02-a6d2-02af4d2c8766",
+            "name": "Remove Address",
+            "url": "{{BaseURL}}{{Port}}/user/removeAddress",
+            "method": "DELETE",
+            "sortNum": 62500,
+            "created": "2024-05-26T02:18:13.594Z",
+            "modified": "2024-05-26T05:47:55.476Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"6652a021cb8e763e218613fb\",\n  \"addressId\":\"6652ccfe9c87c455b379059a\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "76fbabb6-498e-487c-ab49-e110275cd376",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "060dacc7-aa25-459a-908a-f116bbb7d91f",
+            "name": "Login",
+            "url": "{{BaseURL}}{{Port}}/auth/login",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-05-26T02:18:13.596Z",
+            "modified": "2024-05-27T03:16:47.625Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": " {\n    \"email\": \"fabioludwig@gmail.com\",\n    \"password\": \"Abcd1234\"\n }",
+                "form": []
+            }
+        },
+        {
+            "_id": "10efbe5d-00e2-44ef-b950-5b92a0420dd1",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "FindAll",
+            "url": "{{BaseURL}}{{Port}}/pizza/findAll",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-05-26T02:18:13.597Z",
+            "modified": "2024-05-26T02:19:59.368Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "b0b23881-1334-4bb2-8728-9561adbcf66c",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "FindById",
+            "url": "{{BaseURL}}{{Port}}/pizza/find/6653d24fcf87b54d40cd8243",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-05-26T02:18:13.598Z",
+            "modified": "2024-05-27T00:24:02.992Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "160c2f5f-f3d2-4d97-bd30-59f9dacc87b5",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "FindAll",
+            "url": "{{BaseURL}}{{Port}}/cart/findAll/",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-05-26T02:18:13.599Z",
+            "modified": "2024-05-26T03:48:56.402Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "956de97c-affc-4c47-98f8-6ab15c843846",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "Create",
+            "url": "{{BaseURL}}{{Port}}/pizza/create",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-05-26T02:18:13.600Z",
+            "modified": "2024-05-27T03:17:41.273Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"mussarela\",\n  \"description\": \"pizza com queijo mussarela\",\n  \"unitPrice\": 70.90,\n  \"image\": \"mussarela.jpg\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "a32250ed-0c84-457b-a628-6c4f0043ddfa",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "Update",
+            "url": "{{BaseURL}}{{Port}}/produto/update/6348b3c5a87ac732c263d90c",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-05-26T02:18:13.601Z",
+            "modified": "2024-05-26T02:18:13.601Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"produto 1\",\n  \"descricao\": \"produto enlatado de otima qualidade\",\n  \"precoUnitario\": 9.5,\n  \"imagem\": \"img.siteimgs/produto1.jpg\",\n  \"codigoBarra\": 654321\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d84252f-b5d9-4b71-8670-abbd741af51f",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "6d5d850a-1ce9-4acf-afea-7753a18353e6",
+            "name": "Delete",
+            "url": "{{BaseURL}}{{Port}}/pizza/remove/6652a3941eaf46c054a66e94",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-05-26T02:18:13.602Z",
+            "modified": "2024-05-27T01:10:59.888Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "05c8e12b-f05c-4f3c-8303-853c0a7313a3",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "FindById",
+            "url": "{{BaseURL}}{{Port}}/carrinho/find/6348b93f2d329b537e3d7106",
+            "method": "GET",
+            "sortNum": 165000,
+            "created": "2024-05-26T02:18:13.605Z",
+            "modified": "2024-05-26T02:18:13.605Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2144a456-06ec-4233-bb7e-fbe3f1cee5ca",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "Create",
+            "url": "{{BaseURL}}{{Port}}/cart/create/",
+            "method": "POST",
+            "sortNum": 220000,
+            "created": "2024-05-26T02:18:13.611Z",
+            "modified": "2024-05-26T03:05:33.367Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pizzas\": [\n    {\"_id\": \"6652a36f1eaf46c054a66e91\", \"quantity\": 3},\n    {\"_id\": \"6652a36f1eaf46c054a66e91\", \"quantity\": 3}\n  ],\n  \"totalPrice\": 390.45,\n  \"shipping\": 10,\n  \"userId\": \"6652a021cb8e763e218613fb\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "717c9518-863a-45f1-8aa8-7d0c48a99c48",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "Update",
+            "url": "{{BaseURL}}{{Port}}/carrinho/update/6348b93f2d329b537e3d7106",
+            "method": "PUT",
+            "sortNum": 250000,
+            "created": "2024-05-26T02:18:13.612Z",
+            "modified": "2024-05-26T02:18:13.612Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"produtos\": [\n      {\n        \"_id\": \"6348b3f4a29add9b7a2a6bc9\",\n        \"quantidade\": 3\n      },\n      {\n        \"_id\": \"6348b3c5a87ac732c263d90c\",\n        \"quantidade\": 1\n      }\n    ],\n    \"precoTotal\": 110,\n    \"frete\": 9\n  }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "37964da9-7ce2-4e91-b0d6-bc0710a99b46",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "ae3d5d14-2bf6-41d4-ba21-682877d52934",
+            "name": "Delete",
+            "url": "{{BaseURL}}{{Port}}/cart/remove/6652a843fecb0d4298a55d10",
+            "method": "DELETE",
+            "sortNum": 260000,
+            "created": "2024-05-26T02:18:13.613Z",
+            "modified": "2024-05-26T03:50:17.659Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "e230deda-7846-40ab-b67b-a0b2436fa5c9",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "FindAll",
+            "url": "{{BaseURL}}{{Port}}/order/findAll/",
+            "method": "GET",
+            "sortNum": 290000,
+            "created": "2024-05-26T02:18:13.615Z",
+            "modified": "2024-05-26T03:29:57.448Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "28a8e048-177b-4732-856b-28832e3b0e9b",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "FindById",
+            "url": "{{BaseURL}}{{Port}}/pedido/find/6349ff1d0b9c4ea73b4d0434",
+            "method": "GET",
+            "sortNum": 300000,
+            "created": "2024-05-26T02:18:13.616Z",
+            "modified": "2024-05-26T02:18:13.616Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "71e9b0ac-b06e-4a72-9180-35e59a547060",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "Create",
+            "url": "{{BaseURL}}{{Port}}/order/create",
+            "method": "POST",
+            "sortNum": 310000,
+            "created": "2024-05-26T02:18:13.617Z",
+            "modified": "2024-05-26T03:14:17.439Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pizzas\": [\n    {\"_id\": \"6652a36f1eaf46c054a66e91\", \"quantity\": 3},\n    {\"_id\": \"6652a36f1eaf46c054a66e91\", \"quantity\": 3}\n  ],\n  \"totalPrice\": 390.45,\n  \"shipping\": 10,\n  \"userId\": \"6652a021cb8e763e218613fb\",\n  \"concluded\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "f32d22b4-1707-4e23-a592-03a5afbecc46",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "Delete",
+            "url": "{{BaseURL}}{{Port}}/order/remove/6652a909fecb0d4298a55d13",
+            "method": "DELETE",
+            "sortNum": 320000,
+            "created": "2024-05-26T02:18:13.618Z",
+            "modified": "2024-05-26T03:40:36.926Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        },
+        {
+            "_id": "8895054b-dace-4780-938e-58c01b85477f",
+            "colId": "d5c45884-5c01-45f1-a780-438c0fba1770",
+            "containerId": "c0725196-e999-4727-863c-46d2a72ee13f",
+            "name": "UpdateStatus",
+            "url": "{{BaseURL}}{{Port}}/order/updateStatus/6652a909fecb0d4298a55d13",
+            "method": "PATCH",
+            "sortNum": 330000,
+            "created": "2024-05-26T02:18:13.619Z",
+            "modified": "2024-05-26T03:31:59.982Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            }
+        }
+    ],
+    "ref": "3Eszu74t2e-4wOo1Sr2t8YH_-O125GMyVQofmw7rmhRk9FxYAQCts82FVvG8vrknXGIgpMjeiL-rOqoSzryy7A"
+}
