@@ -8,9 +8,11 @@ Para trabalhar neste projeto:
 2. Usando o terminal, executar os seguintes comandos.
 
 para inicializar o projeto
+
 npm init -y
 
 para instalar as dependências (rodar uma linha por dependência)
+
 npm i express
 npm i -D nodemon
 npm i bcrypt
