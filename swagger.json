@@ -356,6 +356,21 @@
               }
             }
           },
+          "403": {
+            "description": "Access denied, usuário sem autorização para alteração",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "404": {
             "description": "Not Found, nenhum usuario encontrado",
             "content": {
@@ -425,6 +440,21 @@
           },
           "401": {
             "description": "Unauthorized, Erro de autenticação, problemas com o token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied, usuário sem autorização para alteração",
             "content": {
               "application/json": {
                 "schema": {
@@ -1456,6 +1486,50 @@
         }
       }
     },
+    "/order/updateStatus/{id}": {
+      "patch": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "atualiza o status do pedido de compras",
+        "description": "Rota responsavel por atualizar o status do pedido da API atraves do ID informado",
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "retorna o objeto atualizado do banco",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error, alguma coisa deu errado no servidor",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },    
     "/pizza/findAll": {
       "get": {
         "security": [
@@ -1664,6 +1738,21 @@
               }
             }
           },
+          "403": {
+            "description": "Access denied, usuário sem autorização para alteração",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "500": {
             "description": "Internal Server Error, alguma coisa deu errado no servidor",
             "content": {
@@ -1729,6 +1818,21 @@
           },
           "401": {
             "description": "Unauthorized, Erro de autenticação, problemas com o token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied, usuário sem autorização para alteração",
             "content": {
               "application/json": {
                 "schema": {
@@ -1811,6 +1915,21 @@
           },
           "401": {
             "description": "Unauthorized, Erro de autenticação, problemas com o token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied, usuário sem autorização para alteração",
             "content": {
               "application/json": {
                 "schema": {

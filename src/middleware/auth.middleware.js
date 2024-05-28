@@ -2,11 +2,22 @@
 const jwt = require("jsonwebtoken");
 const { findUserByIdService } = require("../service/user.service");
 
- // como essa função não é chamada pelo user/create nem pelo user/login, então qualquer
- // 'POST', 'PUT' ou 'DELETE' só pode ser feito por Admin
- const isMethodEnabledForUser = (req) => {
+function checkAddressRoute(req) {
+  const url = req.url;
+  const addressRoutes = ['/addAddress', '/removeAddress'];
+
+  return addressRoutes.some(route => url.includes(route));
+}
+
+// como essa função não é chamada pelo user/create nem pelo user/login, então qualquer
+// 'POST', 'PUT' ou 'DELETE' só pode ser feito por Admin
+// se a URL é para '/addAddress' ou '/removeAddress', então libera os métodos de escrita
+const isMethodEnabledForUser = (req) => {
+  if (checkAddressRoute(req))
+    return true;
+  
   if (req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE')
-      return false;
+    return false;
 
   return true;
 };
@@ -38,8 +49,16 @@ module.exports = async (req, res, next) => {
     if (!user || !user.id)
       return res.status(401).send({ message: "token inválido" });
 
-    if (!isMethodEnabledForUser(req) && !user.admin)
+    if (req.body && req.body.userId) // somente se tiver 'userId' no 'body'
     {
+      if (req.body.userId != user.id && !user.admin)
+      { // somente o route 'cart' e o 'order' passam por aqui
+        console.log("acesso negado. somente o mesmo userId pode alterar seu carrinho ou pedido.");
+        return res.status(403).send("acesso negado.")
+      }
+    }
+    else if (!isMethodEnabledForUser(req) && !user.admin)
+    { // somente os administradores podem executar escritas (a não ser 'add address' e 'remove address')
       console.log("acesso negado. somente administradores podem executar essa ação.");
       return res.status(403).send("acesso negado.")
     }

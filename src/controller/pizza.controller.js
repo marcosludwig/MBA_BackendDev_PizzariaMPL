@@ -3,7 +3,7 @@ const pizzaService = require("../service/pizza.service");
 
 const findPizzaByIdController = async (req, res) => {
   try {
-    res.send(await pizzaService.findPizzaByIdService(req.params.id));
+    return res.status(200).send(await pizzaService.findPizzaByIdService(req.params.id));
   }
   catch (err) {
     console.log(`erro: ${err.message}`);
@@ -13,7 +13,7 @@ const findPizzaByIdController = async (req, res) => {
 
 const findAllPizzasController = async (req, res) => {
   try {
-    res.send(await pizzaService.findAllPizzasService(req.query.limit, req.query.offset));
+    return res.status(200).send(await pizzaService.findAllPizzasService(req.query.limit, req.query.offset));
   }
   catch (err) {
     console.log(`erro: ${err.message}`);
@@ -28,7 +28,7 @@ const createPizzaController = async (req, res) => {
       userId: req.userId
     }
     
-    res.status(201).send(await pizzaService.createPizzaService(corpo));
+    return res.status(201).send(await pizzaService.createPizzaService(corpo));
   }
   catch (err) {
     console.log(`erro: ${err.message}`);
@@ -38,7 +38,7 @@ const createPizzaController = async (req, res) => {
 
 const updatePizzaController = async (req, res) => {
   try {
-    res.send(await pizzaService.updatePizzaService(req.params.id, req.body));
+    return res.status(200).send(await pizzaService.updatePizzaService(req.params.id, req.body));
   }
   catch (err) {
     console.log(`erro: ${err.message}`);
@@ -48,27 +48,7 @@ const updatePizzaController = async (req, res) => {
 
 const removePizzaController = async (req, res) => {
   try {
-    res.send(await pizzaService.removePizzaService(req.params.id));
-  }
-  catch (err) {
-    console.log(`erro: ${err.message}`);
-    res.status(500).send({ message: "erro inesperado. tente novamente." });
-  }
-}
-
-const addCategoryPizzaController = async (req, res) => {
-  try {
-    res.status(200).send(await pizzaService.addCategoryPizzaService(req.params.id, req.body));
-  }
-  catch (err) {
-    console.log(`erro: ${err.message}`);
-    res.status(500).send({ message: "erro inesperado. tente novamente." });
-  }
-}
-
-const removeCategoryPizzaController = async (req, res) => {
-  try {
-    res.send(await pizzaService.removeCategoryPizzaService(req.body));
+    return res.status(200).send(await pizzaService.removePizzaService(req.params.id));
   }
   catch (err) {
     console.log(`erro: ${err.message}`);
@@ -82,6 +62,4 @@ module.exports = {
   createPizzaController,
   updatePizzaController,
   removePizzaController,
-  addCategoryPizzaController,
-  removeCategoryPizzaController,
 }
